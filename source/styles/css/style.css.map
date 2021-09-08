@@ -1,0 +1,1 @@
+{"version":3,"sources":["style.scss"],"names":[],"mappings":"AAAA;AAEA;AAAA;AAAA;EAGG;EAEA;EACA;;;AAGH;EACI","file":"style.css","sourcesContent":["/* Box Model */\r\n\r\n*,\r\n*::before,\r\n*::after {\r\n   box-sizing: border-box;\r\n\r\n   margin: 0px;\r\n   padding: 0px;\r\n}\r\n\r\nhtml {\r\n    overflow: hidden;\r\n}"]}
