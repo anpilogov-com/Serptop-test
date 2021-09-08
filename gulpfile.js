@@ -11,6 +11,8 @@ const htmlmin = require("gulp-htmlmin");
 const cssmin = require("gulp-cssmin");
 const rename = require("gulp-rename");
 
+const ttf2woff2 = require("gulp-ttf2woff2");
+
 /** Generating a cascading style file */
 
 gulp.task("gen-scss", () => {
@@ -31,6 +33,15 @@ gulp.task("gen-svgo", async () => {
       .pipe(svgo())
       .pipe(gulp.dest("./source/img/reduce/"))
       .pipe(gulp.dest("./public/img/reduce/"));
+});
+
+/** Generating a all2woff format fonts */
+
+gulp.task("gen-font", () => {
+   return gulp
+      .src(["./source/fonts/**/*.ttf"])
+      .pipe(ttf2woff2())
+      .pipe(gulp.dest("./source/fonts/"));
 });
 
 /** Minimizing a JS, CSS, HTML files */
